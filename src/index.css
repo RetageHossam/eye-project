@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin './hero.js';
+
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+@layer utilities{
+    .active{
+        @apply px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 bg-linear-to-r from-orange-500 to-orange-600 text-white
+    }
+}
+@layer base{
+    .container{
+        @apply mx-auto
+    }
+}
